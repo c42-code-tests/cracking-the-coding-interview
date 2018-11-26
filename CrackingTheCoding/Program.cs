@@ -10,6 +10,13 @@ namespace CrackingTheCoding
     {
         static void Main(string[] args)
         {
+            var arraysAndStrings = new ArraysAndStrings();
+
+            Console.WriteLine($"IsUnique: {arraysAndStrings.IsUnique("tes")}");
+
+            Console.WriteLine($"IsPermutation: {arraysAndStrings.IsPermutation("test", "esTt")}");
+
+            Console.ReadLine();
         }
     }
 }
