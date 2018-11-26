@@ -26,6 +26,9 @@ namespace CrackingTheCoding
         // 1.2 Check Permutation: Given two strings, write a method to decide if one is a permutation of the other.
         public bool IsPermutation(string str1, string str2)
         {
+            str1 = str1.ToLower();
+            str2 = str2.ToLower();
+
             // if lengths are different they can't be permutations of each other
             if (str1.Length != str2.Length) return false;
 
