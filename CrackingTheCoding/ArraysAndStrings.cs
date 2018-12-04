@@ -42,5 +42,32 @@ namespace CrackingTheCoding
             // if their ascii code sums match they are permutations of each other
             return asciiSumStr1 == asciiSumStr2;
         }
+
+        public string Urlify(string inputString, int length)
+        {
+            char[] charArr = inputString.ToCharArray();
+
+            for(var i = 0; i < length; i++)
+            {
+                if (charArr[i] == ' ')
+                {
+                    ShiftChars(charArr, i, 2);
+
+                    charArr[i] = '%';
+                    charArr[i + 1] = '2';
+                    charArr[i + 2] = '0';
+                }
+            }
+
+            return new string(charArr);
+        }
+
+        private void ShiftChars(char[] charArr, int startIndex, int noOfMoves)
+        {
+            for (int i = charArr.Length - 1; i >= startIndex + noOfMoves; i--)
+            {
+                charArr[i] = charArr[i - noOfMoves];
+            }
+        }
     }
 }

@@ -12,9 +12,11 @@ namespace CrackingTheCoding
         {
             var arraysAndStrings = new ArraysAndStrings();
 
-            Console.WriteLine($"IsUnique: {arraysAndStrings.IsUnique("tes")}");
+            //Console.WriteLine($"IsUnique: {arraysAndStrings.IsUnique("tes")}");
 
-            Console.WriteLine($"IsPermutation: {arraysAndStrings.IsPermutation("test", "esTt")}");
+            //Console.WriteLine($"IsPermutation: {arraysAndStrings.IsPermutation("test", "esTt")}");
+
+            Console.WriteLine($"Urlify: {arraysAndStrings.Urlify("My John  ", 9)}");
 
             Console.ReadLine();
         }
